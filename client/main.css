@@ -1,0 +1,162 @@
+/* CSS declarations go here */
+/* Header */
+.header{
+    position:fixed;height:50px;width:100%;margin:0;border-radius: 0px;
+}
+.codebugLogo{
+    margin-left:20px;height:50px;
+}
+.signInButton{
+    float:right;margin:7.5px 30px 0 0;border:2px solid #fff;padding:4px 20px 4px 20px;border-radius:4px;background-color:rgba(0,0,0,0);color:#fff;
+}
+.signInButton:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+.signInButton:focus{
+    background-color: rgba(0,0,0,0.2);
+}
+.modalSignIn{
+    width:400px;margin-top:0px;
+}
+.modalSignInTitle{
+    font-size:18px;font-weight:500;
+}
+.accountInfo{
+    float:right;margin:0 30px 0 0;color:#fff;height:50px;
+    /*margin padding blm diatur untuk mobile */
+}
+.buttonNotification{
+    background-color: rgba(0,0,0,0.3);
+    padding: 3px 7px 3px 7px;
+    color: #fff;
+    margin: 0 10px 0 0;
+    border-radius: 20px;
+}
+.buttonNotification:hover{
+    background-color: rgba(0,0,0,0.6);
+}
+
+.popupNotification{
+    background-color: #fff;
+    border-radius: 2px;
+    overflow:visible;
+    position:absolute;
+    top:51px;
+    right:30px;
+    width:450px;
+    z-index: -2;
+    display: none;
+}
+.popupNotification:before{
+    content:'';
+    display: block;
+    position: absolute;
+    color: transparent;
+    border: 10px solid black;
+    border-color: transparent transparent white;
+    margin-top: -18px;
+    margin-left: 383px;
+}
+
+.popupAccountControl{
+    background-color: #fff;
+    overflow:visible;
+    border-radius: 2px;
+    position:absolute;
+    top:51px;
+    right:30px;
+    width:350px;
+    z-index: -1;
+    display: none;
+}
+.popupAccountControl:before{
+    content:'';
+    display: block;
+    position: absolute;
+    color: transparent;
+    border: 10px solid black;
+    border-color: transparent transparent white;
+    margin-top: -18px;
+    margin-left: 324px;
+}
+/* /Header */
+
+/* Left Sidebar */
+.leftSidebar{
+    width:300px;
+    float:left;
+    padding-top:50px;
+    height:100vh;
+    border-right:1px solid #e0e0e0;
+}
+/* /Left Sidebar */
+
+/* -------------------------------Media Query-------------------------------- */
+/* Mobile Devices */
+@media only screen and (max-width : 600px){
+    /* Header */
+    .signInButton{
+        margin:8px 10px 0 0;padding:4px 10px 4px 10px;
+    }
+    .codebugLogo{
+        margin-left:10px;
+    }
+    .modalSignIn{
+        width:90%;margin-top:10px;
+    }
+    .modalSignInTitle{
+        font-size:14px;
+    }
+    .accountInfo{
+        margin:0 15px 0 0;
+        /*margin padding blm diatur untuk mobile */
+    }
+    .accountName{
+        display:none;
+    }
+    .popupNotification{
+        width:96%;
+        right:2%;
+        left:2%;
+    }
+    .popupNotification:before{
+        border: 0px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+    .popupAccountControl{
+        width:96%;
+        right:2%;
+        left:2%;
+    }
+    .popupAccountControl:before{
+        border: 0px;
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+    /* /Header */
+
+}
+/* /Mobile Devices */
+
+/* Tablet Devices */
+@media only screen and (max-width : 992px){
+
+}
+/* Tablet Devices */
+
+/* Default CSS is average Laptop Resolution */
+
+/* Large Laptop Devices */
+@media only screen and (min-width : 1367px){
+.modalSignIn{
+    width:500px;
+margin-top:50px;
+}
+.modalSignInTitle{
+    font-size:20px;
+}
+}
+/* Large Laptop Devices */
+/* ---------------------------End Media Query-------------------------------- */

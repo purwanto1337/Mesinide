@@ -1,0 +1,49 @@
+<template name="home">
+    {{#if currentUser}}
+    <div style="height:100vh;width:100%;bottom:0;background-image:url({{#each secondIdeas}}{{backgroundImage}}{{/each}});background-position:center;background-attachment:fixed;background-repeat:no-repeat;background-size:cover;">
+      <div style="background-color:rgba(0,0,0,0.4);height:100vh;width:100%;">
+        <br/>
+        <div style="margin:0 auto;background-color:333;margin-top:200px;font-size:30px;text-align:center;color:#fff;">
+            <span>
+            {{#each firstIdeas}}
+                {{text}}
+            {{/each}}
+            untuk
+            {{#each secondIdeas}}
+                {{text}}
+            {{/each}}
+            </span>
+        </div>
+        <br/>
+        <form class="save-ideas">
+            <input type="hidden" name="ideaText" value="{{#each firstIdeas}}{{text}}{{/each}} for {{#each secondIdeas}}{{text}}{{/each}}"/>
+            <input type="submit" value="SAVE"/>
+        </form>
+      </div>
+    </div>
+
+    <div style="height:100px;position:fixed;width:100%;bottom:110px;z-index:1000;">
+        <div class="card hoverable" style="width:110px;height:110px;background-color:#fff;border-radius:100px;margin:0 auto;margin-top:50px;;text-align:center">
+            <a class="generate" href="">
+                <div style="width:110px;height:110px;border-radius:100px;padding-top:23px;">
+                    <i class="valign material-icons  cyan-text" style="font-size: 60px">replay</i>
+                </div>
+            </a>
+        </div>
+    </div>
+        <div class="card" style="background-color:#fff;height:110px;position:fixed;width:100%;bottom:0;margin-bottom:0;">
+
+            <div class="row" style="font-size:16px;">
+                <div class="col s6 m6 l6 center valign-wrapper" style="padding:0;">
+                    <a href="./my-ideas" style="width:100%;height:200px;padding-top:18px ;" class="my-ideas valign waves-effect waves-dark btn white grey-text"><i class="valign material-icons" style="font-size: 30px">turned_in</i>MY IDEAS</a>
+                </div>
+                <div class="col s6 m6 l6 center valign-wrapper" style="padding:0;">
+                    <a href="./settings" style="width:100%;height:200px;padding-top:18px ;" class="settings valign waves-effect waves-dark btn white grey-text"><i class="valign material-icons" style="font-size: 30px">settings</i>SETTINGS</a>
+                </div>
+            </div>
+        </div>
+    {{else}}
+    public
+    {{/if}}
+
+</template>
