@@ -1,0 +1,2 @@
+# Mesinide
+Startup Idea Generator
